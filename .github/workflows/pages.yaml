@@ -7,12 +7,10 @@ on:
 
 jobs:
   pages_deploy:
-    # Required permissions for GitHub Pages deployment
     permissions:
       contents: read
       pages: write
       id-token: write
-    # Required for GitHub Pages deployment
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
@@ -35,11 +33,24 @@ jobs:
           mv detectable.json dist/
           mv detectable_${DETECTABLE_VERSION}.json dist/
 
+      - name: Check GitHub Pages flag
+        id: pages_flag
+        shell: bash
+        run: |
+          if [ "${{ vars.ENABLE_GITHUB_PAGES }}" = "true" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "GitHub Pages is not enabled. Skipping deployment."
+          fi
+
       - name: Upload GitHub Pages artifact
+        if: steps.pages_flag.outputs.enabled == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
       
       - name: Deploy to GitHub Pages
+        if: steps.pages_flag.outputs.enabled == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
