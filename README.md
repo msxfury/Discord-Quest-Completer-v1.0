@@ -1,4 +1,4 @@
-﻿# Discord Quest Completer
+﻿# Discord Quest Automation
 
 ![Build Artifacts](https://img.shields.io/github/actions/workflow/status/markterence/discord-quest-completer/rust-check.yml?branch=main&style=flat&label=build%20artifacts)
 ![Release Build](https://img.shields.io/github/actions/workflow/status/markterence/discord-quest-completer/build-release.yaml?branch=main&style=flat&label=build%20release)
