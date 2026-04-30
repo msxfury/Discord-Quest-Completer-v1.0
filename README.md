@@ -73,8 +73,7 @@ This project includes a major UI/UX refresh and backend/integration updates comp
 - Subscribe to [msxfury](https://github.com/msxfury) on YouTube: [msxfury](https://www.youtube.com/@msxfury)
 
 ## Credits
-- Original project by [markterence](https://github.com/markterence)
-- UI/UX redesign and integration updates by [msxfury](https://github.com/msxfury)
+- Original project by [msxfury](https://github.com/msxfury)
 
 ## Tech Stack
 - Rust
