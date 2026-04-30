@@ -223,5 +223,4 @@ pnpm build:runner:win # Build runner binary (Windows)
 ## Security and Compliance Disclaimer
 This project is for educational and testing use. You are responsible for complying with Discord Terms of Service and any relevant software, game, or platform policies. The maintainers are not responsible for account actions, bans, restrictions, or damages resulting from use of this software.
 
-## License
-MIT License
+## All Rights Are Reserved
